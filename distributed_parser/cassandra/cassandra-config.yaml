@@ -1,0 +1,31 @@
+cluster_name: '${CASSANDRA_CLUSTER_NAME}'
+
+# Определяет, какой IP-адрес слушать для входящих соединений
+listen_address: '${CASSANDRA_LISTEN_ADDRESS}'
+
+# Определяет, какой IP-адрес использовать для клиентских подключений (например, cqlsh)
+rpc_address: '${CASSANDRA_RPC_ADDRESS}'
+
+# Определяет порт для клиентских подключений
+native_transport_port: ${CASSANDRA_NATIVE_TRANSPORT_PORT}
+
+# Имя пользователя и пароль для аутентификации
+authenticator: AllowAllAuthenticator
+authorizer: AllowAllAuthorizer
+
+# Пути к данным, логам и кэшу
+data_file_directories:
+    - /var/lib/cassandra/data
+commitlog_directory: /var/lib/cassandra/commitlog
+saved_caches_directory: /var/lib/cassandra/saved_caches
+
+# Настройки для кластеризации
+seed_provider:
+    - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+      parameters:
+          - seeds: "${CASSANDRA_SEEDS}"
+
+# Тюнинг производительности
+num_tokens: ${CASSANDRA_NUM_TOKENS}
+concurrent_reads: 32
+concurrent_writes: 32

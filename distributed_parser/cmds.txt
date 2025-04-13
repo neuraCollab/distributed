@@ -1,0 +1,24 @@
+docker build -f Dockerfile.vcpkg -t base-vcpkg .
+
+docker run --rm \
+  -v $(pwd)/proto_files:/app/proto_files \
+  -v $(pwd)/generated:/app/generated \
+  grpc-generator
+
+
+
+minikube start
+minikube status
+minikube dashboard
+
+kubectl apply -f ./kubernetes/  --recursive
+kubectl apply -f ./kubernetes/ --dry-run=client --recursive #kubectl проверил корректность всех манифестов, но не применил их.
+
+kubectl delete all --all
+
+minikube ip
+
+minikube service cassandra-web
+
+minikube image load distributed_parser-coordinator:latest
+minikube image load distributed_parser-worker:latest

@@ -1,0 +1,12 @@
+services:
+  jupyter-notebook-service:
+    container_name: jupyter-notebook-container
+    image: jupyter-notebook-spark
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      # - "./scripts/sparkdata:/sparkdata"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - "./:/home/jovyan/work"
+    ports:
+      - "8888:8888"

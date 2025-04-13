@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    environment:
+      - CASSANDRA_CLUSTER_NAME=MyCluster
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+    ports:
+      - "7000:7000"
+      - "7001:7001"
+      - "7199:7199"
+      - "9042:9042"
+      - "9160:9160"
+    volumes:
+      - "./cassandra/setup.cql:/docker-entrypoint-initdb.d/setup.cql"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "cqlsh", "-f", "/docker-entrypoint-initdb.d/setup.cql"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+
+  
+   
+  cassandra-web:
+    image: ipushc/cassandra-web:latest
+    environment:
+      - CASSANDRA_HOST=cassandra
+      - CASSANDRA_PORT=9042
+      - CASSANDRA_USERNAME=cassandra
+      - CASSANDRA_PASSWORD=cassandra
+    ports:
+      - "3000:8083"
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    networks:
+      - app-network
+    
+      
+  coordinator:
+    build:
+      context: ./coordinator
+      dockerfile: Dockerfile
+    networks:
+      - app-network
+
+  worker:
+    build:
+      context: ./worker
+      dockerfile: Dockerfile
+    networks:
+      - app-network
+    deploy:
+      replicas: 3
+    depends_on:
+      cassandra:
+        condition: service_healthy
+
+
+networks:
+  app-network:
+    driver: bridge

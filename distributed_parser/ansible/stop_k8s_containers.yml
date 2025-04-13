@@ -1,0 +1,64 @@
+---
+- name: Остановить все Deployments, StatefulSets и DaemonSets в Kubernetes
+  hosts: localhost
+  gather_facts: no
+  vars:
+    # Пространства имен, которые нужно исключить (системные)
+    excluded_namespaces:
+      - kube-system
+      - default
+      - kube-public
+      - kube-node-lease
+
+  tasks:
+    - name: Получить список всех пространств имен
+      command: kubectl get namespaces -o json
+      register: namespaces_result
+
+    - name: Парсить имена пространств имен
+      set_fact:
+        namespaces: "{{ namespaces_result.stdout | from_json | json_query('items[?name!=`kube-system` && name!=`default` && name!=`kube-public` && name!=`kube-node-lease`].metadata.name') }}"
+
+    - name: Масштабировать Deployments до 0 реплик
+      community.kubernetes.k8s_scale:
+        resource: deployment
+        namespace: "{{ item }}"
+        name: "{{ deploy.metadata.name }}"
+        replicas: 0
+        kind: Deployment
+      loop: "{{ namespaces }}"
+      loop_control:
+        loop_var: namespace
+      when: "'deployments' in namespace"
+      register: scaled_deployments
+
+    - name: Масштабировать StatefulSets до 0 реплик
+      community.kubernetes.k8s_scale:
+        resource: statefulset
+        namespace: "{{ item }}"
+        name: "{{ sts.metadata.name }}"
+        replicas: 0
+        kind: StatefulSet
+      loop: "{{ namespaces }}"
+      loop_control:
+        loop_var: namespace
+      when: "'statefulsets' in namespace"
+      register: scaled_statefulsets
+
+    - name: Масштабировать DaemonSets до 0 реплик (если применимо)
+      community.kubernetes.k8s_scale:
+        resource: daemonset
+        namespace: "{{ item }}"
+        name: "{{ ds.metadata.name }}"
+        replicas: 0
+        kind: DaemonSet
+      loop: "{{ namespaces }}"
+      loop_control:
+        loop_var: namespace
+      when: "'daemonsets' in namespace"
+      register: scaled_daemonsets
+
+    - name: Вывести сообщение об успешном масштабировании
+      debug:
+        msg: "Все Deployments, StatefulSets и DaemonSets масштабированы до 0 реплик в пространстве имен {{ item }}"
+      loop: "{{ namespaces }}"

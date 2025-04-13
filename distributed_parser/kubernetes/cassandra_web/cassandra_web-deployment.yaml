@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cassandra-web
+  namespace: default
+  labels:
+    app: cassandra-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cassandra-web
+  template:
+    metadata:
+      labels:
+        app: cassandra-web
+    spec:
+      initContainers:
+        - name: wait-for-cassandra
+          image: busybox
+          command:
+            - sh
+            - -c
+            - >
+              while [[ $(kubectl get pods -l app=cassandra -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do
+                echo "Waiting for Cassandra to be ready...";
+                sleep 5;
+              done;
+              echo "Cassandra is ready!";
+      containers:
+        - name: cassandra-web
+          image: ipushc/cassandra-web:latest
+          ports:
+            - containerPort: 8083
+          env:
+            - name: CASSANDRA_HOST
+              value: cassandra
+            - name: CASSANDRA_PORT
+              value: "9042"
+            - name: CASSANDRA_USERNAME
+              value: cassandra
+            - name: CASSANDRA_PASSWORD
+              value: cassandra
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+          readinessProbe:
+            exec:
+              command:
+                - nc
+                - -zv
+                - cassandra
+                - "9042"
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8083
+            initialDelaySeconds: 30
+            periodSeconds: 20

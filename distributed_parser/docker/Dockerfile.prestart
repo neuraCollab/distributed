@@ -1,0 +1,25 @@
+# Base image
+FROM grpc:latest
+
+# Set working directory
+WORKDIR /app
+
+# Copy proto files (default, can be overridden in derived images)
+COPY ./proto_files /app/proto_files
+
+# Ensure output directory exists
+RUN mkdir -p /app/generated
+
+# Set environment variables for flexibility
+ENV PROTO_PATH=/app/proto_files \
+GENERATED_PATH=/app/generated \
+GRPC_PLUGIN=/usr/local/bin/grpc_cpp_plugin
+
+
+WORKDIR /app/proto_files 
+# Default command, can be overridden
+RUN ldconfig && protoc --proto_path=. \
+    --cpp_out=${GENERATED_PATH} \
+    --grpc_out=${GENERATED_PATH} \
+    --plugin=protoc-gen-grpc=${GRPC_PLUGIN} \
+    task.proto

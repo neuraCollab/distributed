@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cassandra-cql-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: "" # Убедитесь, что он совпадает с PVC
+  hostPath:
+    path: /home/bubu/Documents/distributed_parser/cassandra # Абсолютный путь

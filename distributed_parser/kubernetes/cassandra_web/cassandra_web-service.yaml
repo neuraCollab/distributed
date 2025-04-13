@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cassandra-web
+  labels:
+    app: cassandra-web
+spec:
+  selector:
+    app: cassandra-web
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 8083
+  # type: LoadBalancer # по хорошему сюда Ingress прикрутить
+      nodePort: 32000 # кароче эта дичь не работает 
+                          # изза драйвера докера на линукс,
+                          # нужно юзать тунель на локалке,
+                          # если вы знаете, создайте issue пж
+  type: NodePort

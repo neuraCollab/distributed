@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+spec:
+  replicas: 1
+  
+  selector:
+    matchLabels:
+      app: worker
+  template:
+    metadata:
+      labels:
+        app: worker
+    spec:
+      initContainers:
+      - name: wait-for-cassandra
+        image: busybox
+        command:
+          - sh
+          - -c
+          - >
+            while [[ $(kubectl get pods -l app=cassandra -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do
+              echo "Waiting for Cassandra to be ready...";
+              sleep 5;
+            done;
+            echo "Cassandra is ready!";
+
+      containers:
+      - name: worker
+        image: distributed_parser-worker:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: COORDINATOR_HOST
+          value: "coordinator"
+        - name: COORDINATOR_PORT
+          value: "50051"
+        resources:
+            requests:
+              memory: "200Mi"
+              cpu: "500m"
+            limits:
+              memory: "1.5Gi"
+              cpu: "1000m"

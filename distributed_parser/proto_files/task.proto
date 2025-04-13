@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package parser;
+
+service Coordinator {
+    rpc GetTask(TaskRequest) returns (TaskResponse);
+    rpc ReportResult(TaskResult) returns (ResultAck);
+    rpc SubmitTask(SubmitTaskRequest) returns (SubmitTaskResponse);  // Новый метод для отправки URL-адреса
+}
+
+message TaskRequest {
+    string worker_id = 1; // Добавлено поле worker_id
+}
+
+
+message TaskResponse {
+    bool has_task = 1;
+    string url = 2;
+}
+
+message TaskResult {
+    string worker_id = 1;
+    string url = 2;
+    string result = 3;
+}
+
+message ResultAck {
+    bool success = 1;
+}
+
+// Сообщения для SubmitTask
+message SubmitTaskRequest {
+    string url = 1;
+}
+
+message SubmitTaskResponse {
+    bool success = 1;
+}

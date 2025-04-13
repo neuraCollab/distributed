@@ -1,0 +1,7 @@
+.conda
+*.parquet
+*.csv
+*.graphml
+*.json
+.ipynb_checkpoints
+*.pgn

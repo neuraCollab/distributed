@@ -1,0 +1,22 @@
+---
+- name: Остановить все Docker-контейнеры
+  hosts: localhost  # Или укажите целевые хосты
+  become: yes
+  tasks:
+    - name: Получить список всех запущенных контейнеров
+      docker_container_info:
+        all: false
+      register: docker_containers
+
+    - name: Остановить все запущенные контейнеры
+      docker_container:
+        name: "{{ item.Id }}"
+        state: stopped
+      loop: "{{ docker_containers.containers }}"
+      when: docker_containers.containers | length > 0
+      ignore_errors: yes
+
+    - name: Вывести сообщение об успешной остановке
+      debug:
+        msg: "Все Docker-контейнеры остановлены."
+      when: docker_containers.containers | length > 0

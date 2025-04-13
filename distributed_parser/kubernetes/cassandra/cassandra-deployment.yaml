@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cassandra
+  namespace: default
+  labels:
+    app: cassandra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cassandra
+  template:
+    metadata:
+      labels:
+        app: cassandra
+    spec:
+      os: { name: linux }
+      nodeSelector:
+        kubernetes.io/os: linux
+      containers:
+        - name: cassandra
+          image: cassandra:latest
+          ports:
+            - containerPort: 9042
+          volumeMounts:
+            - mountPath: /docker-entrypoint-initdb.d/setup.cql
+              name: myfile
+          env:
+            - name: CASSANDRA_CLUSTER_NAME
+              value: MyCluster
+            - name: CASSANDRA_DC
+              value: datacenter1
+            - name: CASSANDRA_RACK
+              value: rack1
+            - name: CASSANDRA_ENDPOINT_SNITCH
+              value: GossipingPropertyFileSnitch
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - sh
+                  - -c
+                  - |
+                    echo "Waiting for Cassandra to be ready..."
+                    until cqlsh -e "DESCRIBE KEYSPACES"; do
+                      echo "Cassandra is not ready yet, retrying in 10 seconds..."
+                      sleep 10
+                    done
+                    echo "Running setup.cql..."
+                    cqlsh -f /docker-entrypoint-initdb.d/setup.cql
+                    echo "Setup completed!"
+          readinessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - cqlsh -e 'DESCRIBE KEYSPACES'
+            initialDelaySeconds: 180 
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 6
+          livenessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - cqlsh -e 'SELECT now() FROM system.local'
+            initialDelaySeconds: 180
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 6
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "5Gi"
+              cpu: "1000m"
+          
+      volumes:
+      - name: myfile
+        hostPath:
+          path: /home/bubu/Documents/distributed_parser/cassandra/setup.cql
+          type: FileOrCreate
+        # - name: cassandra-setup
+        #   hostPath:
+        #     path: /home/bubu/Documents/distributed_parser/cassandra/ # Путь на хосте к setup.cql
+        #     type: Directory

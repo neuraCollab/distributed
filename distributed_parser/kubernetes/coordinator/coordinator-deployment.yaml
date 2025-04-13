@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coordinator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coordinator
+  template:
+    metadata:
+      labels:
+        app: coordinator
+    spec:
+      
+
+      containers:
+      - name: coordinator
+        image: distributed_parser-coordinator:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+            requests:
+              memory: "200Mi"
+              cpu: "500m"
+            limits:
+              memory: "1.5Gi"
+              cpu: "1000m"

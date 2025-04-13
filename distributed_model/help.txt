@@ -1,0 +1,2 @@
+export DISPLAY=$(grep -m1 nameserver /etc/resolv.conf | awk '{print $2}'):0
+docker run --rm -e DISPLAY=$DISPLAY -v
