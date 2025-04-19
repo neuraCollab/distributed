@@ -2,6 +2,6 @@
 *.parquet
 *.csv
 *.graphml
-*.json
+teams_members.json
 .ipynb_checkpoints
 *.pgn

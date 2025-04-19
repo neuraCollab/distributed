@@ -1,0 +1,6 @@
+написать эндпоит для создания metrics json по урлам (урлы из csv)
+поменять кружочки на карте (цвет)
+увеличить граф в масштабе conda create -n rapids_env -c rapidsai -c nvidia -c conda-forge python=3.11 cudf=23.10 cugraph=23.10 cudatoolkit=12.2
+
+
+первые два пунка сделал, нужно теперь чекнуть

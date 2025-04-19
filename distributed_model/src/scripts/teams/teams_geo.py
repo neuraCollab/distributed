@@ -182,37 +182,90 @@ for row in team_counts_list:
 print("Участники по странам:")
 for country, cnt in country_counts.items():
     print(f"{country}: {cnt}")
+# Импортируем необходимые библиотеки
+import folium
+import branca.colormap as cm
+import math
+import numpy as np
+# ... (предыдущий код остается без изменений до создания карты) ...
 
 # Создаем карту Folium, центрированную примерно по центру мира
-m = folium.Map(location=[20, 0], zoom_start=2)
+m = folium.Map(location=[20, 0], zoom_start=2, tiles='CartoDB positron')
 
-# Определяем минимальное и максимальное количество участников для настройки шкалы цвета
-min_count = min(country_counts.values())
-max_count = max(country_counts.values())
+# Определяем минимальное и максимальное количество участников
+counts = list(country_counts.values())
+min_count = min(counts)
+max_count = max(counts)
 
-# Создаем линейную цветовую шкалу
-colormap = cm.linear.YlOrRd_09.scale(min_count, max_count)
-colormap.caption = 'Количество участников в командах'
+# Создаем нелинейную (логарифмическую) цветовую шкалу от синего до красного
+colormap = cm.LinearColormap(
+    colors=['#1a2dff', '#00b4ff', '#00ffcc', '#ffff00', '#ff7f00', '#ff0000'],
+    vmin=min_count,
+    vmax=max_count
+)
+
+# Для нелинейного отображения используем логарифмическую шкалу
+def log_normalize(value):
+    return math.log(value + 1)  # +1 чтобы избежать log(0)
+
+log_min = log_normalize(min_count)
+log_max = log_normalize(max_count)
+
+# Функция для получения цвета с логарифмической шкалой
+def get_log_color(value):
+    normalized = (log_normalize(value) - log_min) / (log_max - log_min)
+    return colormap(normalized)
+
+colormap.caption = 'Количество участников (логарифмическая шкала)'
 m.add_child(colormap)
 
-# Добавляем круговые маркеры для каждой страны
+# Добавляем круговые маркеры для каждой страны с улучшенной видимостью
 for country, count in country_counts.items():
     coords = country_coords.get(country)
     if coords:
-        # Вычисляем радиус: базовый размер плюс масштабирование по количеству участников
-        radius = 10 + (count - min_count) / (max_count - min_count + 1) * 20
+        # Увеличиваем базовый размер и масштабирование
+        base_size = 15
+        scale_factor = 30
+        radius = base_size + scale_factor * (log_normalize(count) - log_min) / (log_max - log_min)
+        
+        # Используем темную границу для лучшей видимости
         folium.CircleMarker(
             location=coords,
             radius=radius,
-            popup=f"{country}: {count}",
-            color=colormap(count),
+            popup=f"{country}: {count} участников",
+            color='#222',  # темная граница
+            weight=1.5,   # толщина границы
             fill=True,
-            fill_color=colormap(count)
+            fill_color=get_log_color(count),
+            fill_opacity=0.7,  # небольшая прозрачность
+            opacity=1
+        ).add_to(m)
+        
+        # Добавляем подпись с количеством
+        folium.map.Marker(
+            location=[coords[0] - 0.5, coords[1]],
+            icon=folium.DivIcon(
+                icon_size=(150, 36),
+                icon_anchor=(0, 0),
+                html=f'<div style="font-size: 10pt; font-weight: bold; color: {get_log_color(count)};">{count}</div>'
+            )
         ).add_to(m)
 
+# Добавляем легенду с логарифмической шкалой
+legend_html = '''
+     <div style="position: fixed; 
+                 bottom: 50px; left: 50px; width: 220px; height: 80px; 
+                 border:2px solid grey; z-index:9999; font-size:12px;
+                 background-color:white; padding: 10px;
+                 text-align: center;">
+         <b>Количество участников</b><br>
+         (логарифмическая шкала)<br>
+         Min: {} | Max: {}
+     </div>
+'''.format(min_count, max_count)
+
+m.get_root().html.add_child(folium.Element(legend_html))
+
 # Сохраняем карту в HTML
-m.save("teams_map.html")
-print("Карта сохранена в teams_map.html")
-
-
-
+m.save("teams_map_enhanced.html")
+print("Улучшенная карта сохранена в teams_map_enhanced.html")

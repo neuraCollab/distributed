@@ -1,0 +1,68 @@
+{
+  "dp_flops_per_cycle": 8.0,
+  "frequency_ghz": 3.574,
+  "earth_radius_km": 6371.0,
+  "server_country": "Russia",
+  "country_counts": {
+    "Iran": 328,
+    "France": 168,
+    "Russia": 203,
+    "Argentina": 38,
+    "Spain": 56,
+    "Venezuela": 26,
+    "Arab World": 25,
+    "Brazil": 23,
+    "Turkey": 11,
+    "Poland": 9,
+    "India": 12,
+    "Libya": 6
+  },
+  "country_coords": {
+    "Iran": [35.6892, 51.3890],
+    "France": [48.8566, 2.3522],
+    "Russia": [55.7558, 37.6173],
+    "Argentina": [-34.6037, -58.3816],
+    "Spain": [40.4168, -3.7038],
+    "Venezuela": [10.4806, -66.9036],
+    "Arab World": [30.0444, 31.2357],
+    "Brazil": [-23.5505, -46.6333],
+    "Turkey": [41.0082, 28.9784],
+    "Poland": [52.2297, 21.0122],
+    "India": [28.6139, 77.2090],
+    "Libya": [32.8872, 13.1913]
+  },
+  "norm_params": {
+    "top_k": 5,
+    "optimal_hour": 16,
+    "max_deviation": 24
+  },
+  "f_req": 1e9,
+  "server_capacity_rps": 1000000,
+  "sigma_P": 1e15,
+  "sigma_C": 0.1,
+  "metrics_json_path": "/home/jovyan/src/scripts/ddos/metrics.json",
+  "model_params": {
+    "alpha": 0.3,
+    "L": 1.0,
+    "P_req": 2.8e16,
+    "beta": 5.0,
+    "gamma": 1.0,
+    "p_target": 0.999,
+    "N": 37788,
+    "f_req": 1e9,
+    "sigma_R": 0.1,
+    "sigma_C": 0.1,
+    "tA": 0.0,
+    "tB": 0.0,
+    "tC": 0.0,
+    "tD": 0.0,
+    "tE": 0.0,
+    "tG": 0.0,
+    "tH": 10.0,
+    "tI": 6.0,
+    "tJ": 10.0,
+    "tK": 60.0,
+    "P": 0.9
+  }
+
+}

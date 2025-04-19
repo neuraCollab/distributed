@@ -1,0 +1,8 @@
+
+python create_logs_from_github.py -n 1000 -o logs.csv
+
+python generate_metrics_json.py 
+
+python compute_real_metrics.py logs.csv metrics.json
+
+python compute_mva_tail.py metrics.json

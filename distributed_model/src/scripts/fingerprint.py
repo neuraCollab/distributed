@@ -1,68 +1,132 @@
-# %%
+# device_performance.py
+
 import pandas as pd
 import ast
 import matplotlib.pyplot as plt
-
-# %% Загружаем данные
-df = pd.read_csv("./work/src/data/fingerprint/survey-and-browser-attributes-data.csv")
-
-# %% Оставляем только необходимые столбцы для оценки производительности ПК
-df_filtered = df[['Device memory', 'Hardware concurrency', 'Screen resolution']].copy()
-
-# %% Обрабатываем 'Screen resolution', преобразуем строку в список чисел
-df_filtered['Screen resolution'] = df_filtered['Screen resolution'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
-
-# %% Разделяем на ширину и высоту экрана
-df_filtered[['Screen width', 'Screen height']] = pd.DataFrame(df_filtered['Screen resolution'].to_list(), index=df_filtered.index)
-
-# %% Вычисляем количество пикселей
-df_filtered['Screen pixels'] = df_filtered['Screen width'] * df_filtered['Screen height']
+from pathlib import Path
 
 
-# %% Фильтруем строки, где количество пикселей попадает в диапазон ±20%
-matching_range = df_filtered
+def load_data(path: str) -> pd.DataFrame:
+    """Загружает CSV в DataFrame."""
+    return pd.read_csv(path)
 
-# %% Добавляем колонку с расчетом FLOPS (предположим, что FLOPS = Hardware concurrency * частота процессора)
-# Для гипотетической частоты процессора, допустим, 2.5 GHz (2.5 * 10^9 операций в секунду)
-cpu_frequency = 2.5e9  # 2.5 GHz
+def filter_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Оставляет только нужные столбцы."""
+    return df[['Device memory', 'Hardware concurrency', 'Screen resolution']].copy()
 
-# %% Рассчитываем FLOPS
-matching_range['FLOPS'] = matching_range['Hardware concurrency'] * cpu_frequency
 
-# %% Добавляем коэффициент производительности: Screen pixels * Device memory / FLOPS
-matching_range['Performance coefficient'] = (matching_range['Screen pixels'] * matching_range['Device memory']) / matching_range['FLOPS'] * 1e4  # Умножаем на 10^4 для удобства
+def parse_screen_resolution(df: pd.DataFrame) -> pd.DataFrame:
+    """Преобразует строку 'Screen resolution' в два числа: width и height."""
+    df = df.copy()
+    df['Screen resolution'] = df['Screen resolution'].apply(
+        lambda x: ast.literal_eval(x) if isinstance(x, str) else x
+    )
+    df[['Screen width', 'Screen height']] = pd.DataFrame(
+        df['Screen resolution'].to_list(), index=df.index
+    )
+    return df
 
-# %% Вычисляем средние значения для новых колонок
-# Вычисляем средние значения для новых колонок
-mean_values = matching_range[['Device memory', 'Hardware concurrency', 'Screen pixels', 'FLOPS', 'Performance coefficient']].mean()
 
-# %% Выводим средние значения
-print("Средние значения для устройств")
-print(mean_values)
+def compute_pixels(df: pd.DataFrame) -> pd.DataFrame:
+    """Добавляет столбец 'Screen pixels' = width * height."""
+    df = df.copy()
+    df['Screen pixels'] = df['Screen width'] * df['Screen height']
+    return df
 
-# Сохраняем средние значения в CSV файл
-mean_values.to_csv("mean_device_performance.csv", header=True)
 
-# %% Визуализируем данные
-plt.figure(figsize=(10, 6))
+def compute_flops(df: pd.DataFrame, cpu_frequency: float) -> pd.DataFrame:
+    """
+    Добавляет столбец 'FLOPS' = Hardware concurrency * cpu_frequency.
+    cpu_frequency в Гц (например, 2.5e9 для 2.5 GHz).
+    """
+    df = df.copy()
+    df['FLOPS'] = df['Hardware concurrency'] * cpu_frequency
+    return df
 
-# Плотим гистограмму для "Screen pixels"
-plt.hist(matching_range['Screen pixels'], bins=30, edgecolor='black', color='lightblue')
-plt.axvline(x=mean_values['Screen pixels'], color='red', linestyle='dashed', linewidth=2, label='Среднее значение пикселей')
 
-# Плотим гистограмму для других столбцов
-plt.title("Гистограмма количества пикселей для устройств в диапазоне ±20% от 1,254,486")
-plt.xlabel("Количество пикселей")
-plt.ylabel("Частота")
-plt.legend()
+def compute_performance_coefficient(df: pd.DataFrame, scale: float = 1e4) -> pd.DataFrame:
+    """
+    Добавляет 'Performance coefficient' = (pixels * memory) / FLOPS * scale.
+    scale по умолчанию 1e4 для удобства.
+    """
+    df = df.copy()
+    df['Performance coefficient'] = (
+        df['Screen pixels'] * df['Device memory'] / df['FLOPS']
+    ) * scale
+    return df
 
-# Показать график
-plt.tight_layout()
-plt.show()
 
-# %% Выводим первые 5 значений с новыми колонками
-print("Первые 5 строк с расчетами:")
-print(matching_range[['Device memory', 'Hardware concurrency', 'Screen resolution', 'Screen pixels', 'FLOPS', 'Performance coefficient']].head())
+def compute_means(df: pd.DataFrame) -> pd.Series:
+    """Вычисляет средние по ключевым столбцам."""
+    cols = ['Device memory', 'Hardware concurrency', 'Screen pixels', 'FLOPS', 'Performance coefficient']
+    return df[cols].mean()
 
-# %% Сохраняем результат в новый CSV файл
-matching_range.to_csv("filtered_device_performance.csv", index=False)
+
+def save_means(means: pd.Series, path: str):
+    """Сохраняет средние значения в CSV."""
+    means.to_csv(path, header=True)
+
+
+def save_full(df: pd.DataFrame, path: str):
+    """Сохраняет полный DataFrame с расчётами в CSV."""
+    df.to_csv(path, index=False)
+
+
+def plot_histogram_pixels(df: pd.DataFrame, mean_pixels: float):
+    """Гистограмма распределения 'Screen pixels' с линией среднего."""
+    plt.figure(figsize=(10, 6))
+    plt.hist(df['Screen pixels'], bins=30, edgecolor='black', color='lightblue')
+    plt.axvline(mean_pixels, color='red', linestyle='dashed', linewidth=2, label='Среднее пикселей')
+    plt.title("Гистограмма количества пикселей")
+    plt.xlabel("Screen pixels")
+    plt.ylabel("Частота")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+
+def show_head(df: pd.DataFrame, n: int = 5):
+    """Печатает первые n строк ключевых столбцов."""
+    cols = ['Device memory', 'Hardware concurrency', 'Screen resolution',
+            'Screen pixels', 'FLOPS', 'Performance coefficient']
+    print(df[cols].head(n))
+
+
+def get_average_cores(df: pd.DataFrame | None = None, 
+                      data_path: str | None = "./src/data/fingerprint/survey-and-browser-attributes-data.csv") -> float:
+    """Вспомогательная: среднее число ядер (hardware concurrency)."""
+    if df is None:
+        df = load_data(data_path) 
+    return df['Hardware concurrency'].mean()
+
+
+def main():
+    
+    data_path = "./data/fingerprint/survey-and-browser-attributes-data.csv"
+    df = load_data(data_path)
+
+    # 2. Предобработка
+    df = filter_columns(df)
+    df = parse_screen_resolution(df)
+    df = compute_pixels(df)
+
+    # 3. Расчёты
+    cpu_freq = 2.5e9  # 2.5 GHz
+    df = compute_flops(df, cpu_freq)
+    df = compute_performance_coefficient(df)
+
+    # 4. Средние и сохранение
+    means = compute_means(df)
+    print("Средние значения:")
+    print(means)
+    save_means(means, "mean_device_performance.csv")
+    save_full(df, "filtered_device_performance.csv")
+
+    # 5. Визуализация и вывод
+    plot_histogram_pixels(df, means['Screen pixels'])
+    print("\nПервые 5 строк с расчётами:")
+    show_head(df)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,1595 @@
+{
+  "lambda_rps": 0.034578146611341634,
+  "system_avg_latency": 96.79274799999999,
+  "nodes": [
+    {
+      "name": "/",
+      "visit_ratio": 0.018,
+      "avg_latency": 75.37155555555556,
+      "p95_latency": 75.864,
+      "p99_latency": 75.864
+    },
+    {
+      "name": "/?N=A&page=21",
+      "visit_ratio": 0.002,
+      "avg_latency": 67.028,
+      "p95_latency": 67.028,
+      "p99_latency": 67.028
+    },
+    {
+      "name": "/?flav=atom",
+      "visit_ratio": 0.008,
+      "avg_latency": 64.704,
+      "p95_latency": 64.704,
+      "p99_latency": 64.704
+    },
+    {
+      "name": "/?flav=rss20",
+      "visit_ratio": 0.014,
+      "avg_latency": 59.882,
+      "p95_latency": 59.882,
+      "p99_latency": 59.882
+    },
+    {
+      "name": "/?page=2",
+      "visit_ratio": 0.004,
+      "avg_latency": 73.346,
+      "p95_latency": 73.346,
+      "p99_latency": 73.346
+    },
+    {
+      "name": "/about/",
+      "visit_ratio": 0.004,
+      "avg_latency": 22.948,
+      "p95_latency": 22.948,
+      "p99_latency": 22.948
+    },
+    {
+      "name": "/administrator/index.php",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.606,
+      "p95_latency": 0.606,
+      "p99_latency": 0.606
+    },
+    {
+      "name": "/articles",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.646,
+      "p95_latency": 0.646,
+      "p99_latency": 0.646
+    },
+    {
+      "name": "/articles/",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.962,
+      "p95_latency": 19.962,
+      "p99_latency": 19.962
+    },
+    {
+      "name": "/articles/arp-security/",
+      "visit_ratio": 0.004,
+      "avg_latency": 39.47,
+      "p95_latency": 39.47,
+      "p99_latency": 39.47
+    },
+    {
+      "name": "/articles/dynamic-dns-with-dhcp/",
+      "visit_ratio": 0.012,
+      "avg_latency": 37.696,
+      "p95_latency": 37.696,
+      "p99_latency": 37.696
+    },
+    {
+      "name": "/articles/efficiency/",
+      "visit_ratio": 0.004,
+      "avg_latency": 72.796,
+      "p95_latency": 72.796,
+      "p99_latency": 72.796
+    },
+    {
+      "name": "/articles/openldap-with-saslauthd/",
+      "visit_ratio": 0.004,
+      "avg_latency": 25.4,
+      "p95_latency": 25.4,
+      "p99_latency": 25.4
+    },
+    {
+      "name": "/articles/ppp-over-ssh/",
+      "visit_ratio": 0.004,
+      "avg_latency": 37.172,
+      "p95_latency": 37.172,
+      "p99_latency": 37.172
+    },
+    {
+      "name": "/articles/ssh-security/",
+      "visit_ratio": 0.006,
+      "avg_latency": 33.086,
+      "p95_latency": 33.086,
+      "p99_latency": 33.086
+    },
+    {
+      "name": "/articles/week-of-unix-tools/",
+      "visit_ratio": 0.004,
+      "avg_latency": 18.626,
+      "p95_latency": 18.626,
+      "p99_latency": 18.626
+    },
+    {
+      "name": "/blog",
+      "visit_ratio": 0.004,
+      "avg_latency": 75.872,
+      "p95_latency": 75.872,
+      "p99_latency": 75.872
+    },
+    {
+      "name": "/blog/geekery/60.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.728,
+      "p95_latency": 18.728,
+      "p99_latency": 18.728
+    },
+    {
+      "name": "/blog/geekery/CEE-logging-for-profit.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 26.716,
+      "p95_latency": 26.716,
+      "p99_latency": 26.716
+    },
+    {
+      "name": "/blog/geekery/c-vs-python-bdb.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 22.776,
+      "p95_latency": 22.776,
+      "p99_latency": 22.776
+    },
+    {
+      "name": "/blog/geekery/devopsdays-2010.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 20.174,
+      "p95_latency": 20.174,
+      "p99_latency": 20.174
+    },
+    {
+      "name": "/blog/geekery/disabling-battery-in-ubuntu-vms.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+semicomplete%2Fmain+%28semicomplete.com+-+Jordan+Sissel%29",
+      "visit_ratio": 0.004,
+      "avg_latency": 18.632,
+      "p95_latency": 18.632,
+      "p99_latency": 18.632
+    },
+    {
+      "name": "/blog/geekery/disabling-battery-in-ubuntu-vms.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.632,
+      "p95_latency": 18.632,
+      "p99_latency": 18.632
+    },
+    {
+      "name": "/blog/geekery/ec2-reserved-vs-ondemand.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 23.668,
+      "p95_latency": 23.668,
+      "p99_latency": 23.668
+    },
+    {
+      "name": "/blog/geekery/eventdb-ideas.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 22.836,
+      "p95_latency": 22.836,
+      "p99_latency": 22.836
+    },
+    {
+      "name": "/blog/geekery/headless-wrapper-for-ephemeral-xservers.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 23.804,
+      "p95_latency": 23.804,
+      "p99_latency": 23.804
+    },
+    {
+      "name": "/blog/geekery/insist-on-better-asserts.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.028,
+      "p95_latency": 19.028,
+      "p99_latency": 19.028
+    },
+    {
+      "name": "/blog/geekery/installing-windows-8-consumer-preview.html",
+      "visit_ratio": 0.004,
+      "avg_latency": 17.896,
+      "p95_latency": 17.896,
+      "p99_latency": 17.896
+    },
+    {
+      "name": "/blog/geekery/installing-windows-8-consumer-preview.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 17.896,
+      "p95_latency": 17.896,
+      "p99_latency": 17.896
+    },
+    {
+      "name": "/blog/geekery/jquery-interface-puffer.html%20target=",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.404,
+      "p95_latency": 0.404,
+      "p99_latency": 0.404
+    },
+    {
+      "name": "/blog/geekery/logstash-1.0.0-release.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 17.528,
+      "p95_latency": 17.528,
+      "p99_latency": 17.528
+    },
+    {
+      "name": "/blog/geekery/oniguruma-named-capture-example.html?commentlimit=0",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.416,
+      "p95_latency": 18.416,
+      "p99_latency": 18.416
+    },
+    {
+      "name": "/blog/geekery/overriding-shared-library-functions.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.216,
+      "p95_latency": 18.216,
+      "p99_latency": 18.216
+    },
+    {
+      "name": "/blog/geekery/puppet-facts-into-mcollective.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.744,
+      "p95_latency": 19.744,
+      "p99_latency": 19.744
+    },
+    {
+      "name": "/blog/geekery/puppet-manage-homedirectory-contents.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 20.002,
+      "p95_latency": 20.002,
+      "p99_latency": 20.002
+    },
+    {
+      "name": "/blog/geekery/rhapsody-on-linux.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.218,
+      "p95_latency": 18.218,
+      "p99_latency": 18.218
+    },
+    {
+      "name": "/blog/geekery/server-side-javascript.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 17.174,
+      "p95_latency": 17.174,
+      "p99_latency": 17.174
+    },
+    {
+      "name": "/blog/geekery/soekris-gpio.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.174,
+      "p95_latency": 19.174,
+      "p99_latency": 19.174
+    },
+    {
+      "name": "/blog/geekery/solving-good-or-bad-problems.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+semicomplete%2Fmain+%28semicomplete.com+-+Jordan+Sissel%29",
+      "visit_ratio": 0.004,
+      "avg_latency": 21.512,
+      "p95_latency": 21.512,
+      "p99_latency": 21.512
+    },
+    {
+      "name": "/blog/geekery/solving-good-or-bad-problems.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 21.512,
+      "p95_latency": 21.512,
+      "p99_latency": 21.512
+    },
+    {
+      "name": "/blog/geekery/sparsa2006.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 50.612,
+      "p95_latency": 50.612,
+      "p99_latency": 50.612
+    },
+    {
+      "name": "/blog/geekery/ssh-key-invalid-hack.html?commentlimit=0",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.67,
+      "p95_latency": 18.67,
+      "p99_latency": 18.67
+    },
+    {
+      "name": "/blog/geekery/ssl-latency.html",
+      "visit_ratio": 0.014,
+      "avg_latency": 34.29399999999999,
+      "p95_latency": 34.294,
+      "p99_latency": 34.294
+    },
+    {
+      "name": "/blog/geekery/tf2-wine-linux-performance-tuning.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 20.042,
+      "p95_latency": 20.042,
+      "p99_latency": 20.042
+    },
+    {
+      "name": "/blog/geekery/vmware-cpu-performance.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 25.816,
+      "p95_latency": 25.816,
+      "p99_latency": 25.816
+    },
+    {
+      "name": "/blog/geekery/xdotool-2.20110530.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 23.872,
+      "p95_latency": 23.872,
+      "p99_latency": 23.872
+    },
+    {
+      "name": "/blog/geekery/xdotool-2.20110530.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 23.872,
+      "p95_latency": 23.872,
+      "p99_latency": 23.872
+    },
+    {
+      "name": "/blog/geekery/xsendevent-xdotool-and-ld_preload.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 20.098,
+      "p95_latency": 20.098,
+      "p99_latency": 20.098
+    },
+    {
+      "name": "/blog/geekery/xvfb-firefox.html",
+      "visit_ratio": 0.006,
+      "avg_latency": 21.95,
+      "p95_latency": 21.95,
+      "p99_latency": 21.95
+    },
+    {
+      "name": "/blog/geekery/yahoo-hackday-08.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.764,
+      "p95_latency": 19.764,
+      "p99_latency": 19.764
+    },
+    {
+      "name": "/blog/geekery/year-in-review-2011.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 22.236,
+      "p95_latency": 22.236,
+      "p99_latency": 22.236
+    },
+    {
+      "name": "/blog/growing-logstash-value.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+semicomplete/main+(semicomplete.com+-+Jordan+Sissel)",
+      "visit_ratio": 0.002,
+      "avg_latency": 22.226,
+      "p95_latency": 22.226,
+      "p99_latency": 22.226
+    },
+    {
+      "name": "/blog/productivity/better-zsh-xterm-title-fix.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 20.37,
+      "p95_latency": 20.37,
+      "p99_latency": 20.37
+    },
+    {
+      "name": "/blog/projects/xmlpresenter/main.html",
+      "visit_ratio": 0.004,
+      "avg_latency": 23.256,
+      "p95_latency": 23.256,
+      "p99_latency": 23.256
+    },
+    {
+      "name": "/blog/rants/fedora-yum.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 16.656,
+      "p95_latency": 16.656,
+      "p99_latency": 16.656
+    },
+    {
+      "name": "/blog/tags/C",
+      "visit_ratio": 0.002,
+      "avg_latency": 75.982,
+      "p95_latency": 75.982,
+      "p99_latency": 75.982
+    },
+    {
+      "name": "/blog/tags/C?page=2",
+      "visit_ratio": 0.002,
+      "avg_latency": 32.622,
+      "p95_latency": 32.622,
+      "p99_latency": 32.622
+    },
+    {
+      "name": "/blog/tags/X11",
+      "visit_ratio": 0.002,
+      "avg_latency": 65.484,
+      "p95_latency": 65.484,
+      "p99_latency": 65.484
+    },
+    {
+      "name": "/blog/tags/bdb",
+      "visit_ratio": 0.002,
+      "avg_latency": 46.198,
+      "p95_latency": 46.198,
+      "p99_latency": 46.198
+    },
+    {
+      "name": "/blog/tags/defcon",
+      "visit_ratio": 0.002,
+      "avg_latency": 48.284,
+      "p95_latency": 48.284,
+      "p99_latency": 48.284
+    },
+    {
+      "name": "/blog/tags/examples",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.416,
+      "p95_latency": 18.416,
+      "p99_latency": 18.416
+    },
+    {
+      "name": "/blog/tags/firefox?flav=rss20",
+      "visit_ratio": 0.008,
+      "avg_latency": 32.042,
+      "p95_latency": 32.042,
+      "p99_latency": 32.042
+    },
+    {
+      "name": "/blog/tags/grok",
+      "visit_ratio": 0.002,
+      "avg_latency": 60.692,
+      "p95_latency": 60.692,
+      "p99_latency": 60.692
+    },
+    {
+      "name": "/blog/tags/ipv6",
+      "visit_ratio": 0.002,
+      "avg_latency": 24.502,
+      "p95_latency": 24.502,
+      "p99_latency": 24.502
+    },
+    {
+      "name": "/blog/tags/is%20it%20done%20yet",
+      "visit_ratio": 0.002,
+      "avg_latency": 21.088,
+      "p95_latency": 21.088,
+      "p99_latency": 21.088
+    },
+    {
+      "name": "/blog/tags/linux",
+      "visit_ratio": 0.002,
+      "avg_latency": 58.438,
+      "p95_latency": 58.438,
+      "p99_latency": 58.438
+    },
+    {
+      "name": "/blog/tags/munin",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.492,
+      "p95_latency": 19.492,
+      "p99_latency": 19.492
+    },
+    {
+      "name": "/blog/tags/net4501",
+      "visit_ratio": 0.002,
+      "avg_latency": 23.512,
+      "p95_latency": 23.512,
+      "p99_latency": 23.512
+    },
+    {
+      "name": "/blog/tags/noise",
+      "visit_ratio": 0.002,
+      "avg_latency": 17.97,
+      "p95_latency": 17.97,
+      "p99_latency": 17.97
+    },
+    {
+      "name": "/blog/tags/projects",
+      "visit_ratio": 0.002,
+      "avg_latency": 56.74,
+      "p95_latency": 56.74,
+      "p99_latency": 56.74
+    },
+    {
+      "name": "/blog/tags/puppet?flav=rss20",
+      "visit_ratio": 0.04,
+      "avg_latency": 29.744000000000007,
+      "p95_latency": 29.744,
+      "p99_latency": 29.744
+    },
+    {
+      "name": "/blog/tags/rdbms",
+      "visit_ratio": 0.002,
+      "avg_latency": 17.818,
+      "p95_latency": 17.818,
+      "p99_latency": 17.818
+    },
+    {
+      "name": "/blog/tags/regex",
+      "visit_ratio": 0.002,
+      "avg_latency": 29.776,
+      "p95_latency": 29.776,
+      "p99_latency": 29.776
+    },
+    {
+      "name": "/blog/tags/regexp",
+      "visit_ratio": 0.002,
+      "avg_latency": 41.026,
+      "p95_latency": 41.026,
+      "p99_latency": 41.026
+    },
+    {
+      "name": "/blog/tags/release",
+      "visit_ratio": 0.002,
+      "avg_latency": 81.386,
+      "p95_latency": 81.386,
+      "p99_latency": 81.386
+    },
+    {
+      "name": "/blog/tags/scale",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.492,
+      "p95_latency": 19.492,
+      "p99_latency": 19.492
+    },
+    {
+      "name": "/blog/tags/statistics",
+      "visit_ratio": 0.002,
+      "avg_latency": 59.412,
+      "p95_latency": 59.412,
+      "p99_latency": 59.412
+    },
+    {
+      "name": "/blog/tags/subversion",
+      "visit_ratio": 0.002,
+      "avg_latency": 25.114,
+      "p95_latency": 25.114,
+      "p99_latency": 25.114
+    },
+    {
+      "name": "/blog/tags/sysadvent",
+      "visit_ratio": 0.002,
+      "avg_latency": 29.114,
+      "p95_latency": 29.114,
+      "p99_latency": 29.114
+    },
+    {
+      "name": "/blog/tags/web",
+      "visit_ratio": 0.002,
+      "avg_latency": 88.038,
+      "p95_latency": 88.038,
+      "p99_latency": 88.038
+    },
+    {
+      "name": "/blog/tags/xpathtool",
+      "visit_ratio": 0.002,
+      "avg_latency": 24.3,
+      "p95_latency": 24.3,
+      "p99_latency": 24.3
+    },
+    {
+      "name": "/blog/web/194.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 16.502,
+      "p95_latency": 16.502,
+      "p99_latency": 16.502
+    },
+    {
+      "name": "/blog/web/firefox-scrolling-fix.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 17.912,
+      "p95_latency": 17.912,
+      "p99_latency": 17.912
+    },
+    {
+      "name": "/doc/index.html?org/elasticsearch/action/search/SearchResponse.html",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.588,
+      "p95_latency": 0.588,
+      "p99_latency": 0.588
+    },
+    {
+      "name": "/favicon.ico",
+      "visit_ratio": 0.072,
+      "avg_latency": 7.276000000000001,
+      "p95_latency": 7.276,
+      "p99_latency": 7.276
+    },
+    {
+      "name": "/files/blogposts/20070901/?C=D;O=A",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.96,
+      "p95_latency": 1.96,
+      "p99_latency": 1.96
+    },
+    {
+      "name": "/files/blogposts/20080106/glow.c",
+      "visit_ratio": 0.002,
+      "avg_latency": 3.842,
+      "p95_latency": 3.842,
+      "p99_latency": 3.842
+    },
+    {
+      "name": "/files/blogposts/20080107/oniguruma_named_captures.c",
+      "visit_ratio": 0.002,
+      "avg_latency": 4.112,
+      "p95_latency": 4.112,
+      "p99_latency": 4.112
+    },
+    {
+      "name": "/files/blogposts/20080109/boost_xpressive_test.cpp",
+      "visit_ratio": 0.002,
+      "avg_latency": 3.066,
+      "p95_latency": 3.066,
+      "p99_latency": 3.066
+    },
+    {
+      "name": "/files/blogposts/20080611/",
+      "visit_ratio": 0.002,
+      "avg_latency": 2.35,
+      "p95_latency": 2.35,
+      "p99_latency": 2.35
+    },
+    {
+      "name": "/files/blogposts/20090520/",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.932,
+      "p95_latency": 1.932,
+      "p99_latency": 1.932
+    },
+    {
+      "name": "/files/blogposts/20101112/logstash-logger-with-awesome_print.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 8.65,
+      "p95_latency": 8.65,
+      "p99_latency": 8.65
+    },
+    {
+      "name": "/files/fastsplit/?C=M;O=D",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.916,
+      "p95_latency": 1.916,
+      "p99_latency": 1.916
+    },
+    {
+      "name": "/files/hello/?C=M;O=A",
+      "visit_ratio": 0.002,
+      "avg_latency": 2.254,
+      "p95_latency": 2.254,
+      "p99_latency": 2.254
+    },
+    {
+      "name": "/files/images/?C=S;O=D",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.888,
+      "p95_latency": 1.888,
+      "p99_latency": 1.888
+    },
+    {
+      "name": "/files/logstash/?C=D;O=D",
+      "visit_ratio": 0.002,
+      "avg_latency": 26.632,
+      "p95_latency": 26.632,
+      "p99_latency": 26.632
+    },
+    {
+      "name": "/files/logstash/logstash-1.3.2-monolithic.jar",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.648,
+      "p95_latency": 0.648,
+      "p99_latency": 0.648
+    },
+    {
+      "name": "/files/lumberjack/lumberjack-0.3.0.exe",
+      "visit_ratio": 0.002,
+      "avg_latency": 8757.248,
+      "p95_latency": 8757.248,
+      "p99_latency": 8757.248
+    },
+    {
+      "name": "/files/xdotool/docs",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.682,
+      "p95_latency": 0.682,
+      "p99_latency": 0.682
+    },
+    {
+      "name": "/files/xdotool/docs/",
+      "visit_ratio": 0.004,
+      "avg_latency": 2.656,
+      "p95_latency": 2.656,
+      "p99_latency": 2.656
+    },
+    {
+      "name": "/files/xdotool/docs/man/?C=M;O=D",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.918,
+      "p95_latency": 1.918,
+      "p99_latency": 1.918
+    },
+    {
+      "name": "/icons/back.gif",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.432,
+      "p95_latency": 0.432,
+      "p99_latency": 0.432
+    },
+    {
+      "name": "/icons/blank.gif",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.296,
+      "p95_latency": 0.296,
+      "p99_latency": 0.296
+    },
+    {
+      "name": "/icons/folder.gif",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.45,
+      "p95_latency": 0.45,
+      "p99_latency": 0.45
+    },
+    {
+      "name": "/icons/text.gif",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.458,
+      "p95_latency": 0.458,
+      "p99_latency": 0.458
+    },
+    {
+      "name": "/images/googledotcom.png",
+      "visit_ratio": 0.008,
+      "avg_latency": 131.496,
+      "p95_latency": 131.496,
+      "p99_latency": 131.496
+    },
+    {
+      "name": "/images/jordan-80.png",
+      "visit_ratio": 0.054,
+      "avg_latency": 12.291999999999996,
+      "p95_latency": 12.292,
+      "p99_latency": 12.292
+    },
+    {
+      "name": "/images/logstash_OSCON.pdf",
+      "visit_ratio": 0.006,
+      "avg_latency": 3387.356,
+      "p95_latency": 3387.356,
+      "p99_latency": 3387.356
+    },
+    {
+      "name": "/images/web/2009/banner.png",
+      "visit_ratio": 0.052,
+      "avg_latency": 104.63000000000001,
+      "p95_latency": 104.63,
+      "p99_latency": 104.63
+    },
+    {
+      "name": "/misc/rcfiles/ion3/look_simpleblue.lua",
+      "visit_ratio": 0.002,
+      "avg_latency": 6.358,
+      "p95_latency": 6.358,
+      "p99_latency": 6.358
+    },
+    {
+      "name": "/presentations/hackday06",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.676,
+      "p95_latency": 0.676,
+      "p99_latency": 0.676
+    },
+    {
+      "name": "/presentations/hackday06/",
+      "visit_ratio": 0.004,
+      "avg_latency": 13.438,
+      "p95_latency": 13.438,
+      "p99_latency": 13.438
+    },
+    {
+      "name": "/presentations/hackday08",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.676,
+      "p95_latency": 0.676,
+      "p99_latency": 0.676
+    },
+    {
+      "name": "/presentations/hackday08/",
+      "visit_ratio": 0.002,
+      "avg_latency": 5.634,
+      "p95_latency": 5.634,
+      "p99_latency": 5.634
+    },
+    {
+      "name": "/presentations/logstash-1/file/about-me/tequila-face.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 392.108,
+      "p95_latency": 392.108,
+      "p99_latency": 392.108
+    },
+    {
+      "name": "/presentations/logstash-metrics-sf-2012.10/",
+      "visit_ratio": 0.004,
+      "avg_latency": 37.458,
+      "p95_latency": 37.458,
+      "p99_latency": 37.458
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/css/fonts/Roboto-Bold.ttf",
+      "visit_ratio": 0.002,
+      "avg_latency": 77.44,
+      "p95_latency": 77.44,
+      "p99_latency": 77.44
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/css/fonts/Roboto-Regular.ttf",
+      "visit_ratio": 0.002,
+      "avg_latency": 83.64,
+      "p95_latency": 83.64,
+      "p99_latency": 83.64
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/css/print/paper.css",
+      "visit_ratio": 0.002,
+      "avg_latency": 8.508,
+      "p95_latency": 8.508,
+      "p99_latency": 8.508
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/1983_delorean_dmc-12-pic-38289.jpeg",
+      "visit_ratio": 0.002,
+      "avg_latency": 441.124,
+      "p95_latency": 441.124,
+      "p99_latency": 441.124
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/Dreamhost_logo.svg",
+      "visit_ratio": 0.002,
+      "avg_latency": 4.252,
+      "p95_latency": 4.252,
+      "p99_latency": 4.252
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/apache-icon.gif",
+      "visit_ratio": 0.002,
+      "avg_latency": 16.19,
+      "p95_latency": 16.19,
+      "p99_latency": 16.19
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/elasticsearch.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 16.052,
+      "p95_latency": 16.052,
+      "p99_latency": 16.052
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/frontend-response-codes.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 105.756,
+      "p95_latency": 105.756,
+      "p99_latency": 105.756
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/github-contributions.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 68.49,
+      "p95_latency": 68.49,
+      "p99_latency": 68.49
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/kibana-dashboard.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 643.262,
+      "p95_latency": 643.262,
+      "p99_latency": 643.262
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/kibana-dashboard2.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 789.934,
+      "p95_latency": 789.934,
+      "p99_latency": 789.934
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/kibana-dashboard3.png",
+      "visit_ratio": 0.004,
+      "avg_latency": 343.434,
+      "p95_latency": 343.434,
+      "p99_latency": 343.434
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/kibana-search.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 406.046,
+      "p95_latency": 406.046,
+      "p99_latency": 406.046
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/logstashbook.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 109.324,
+      "p95_latency": 109.324,
+      "p99_latency": 109.324
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/nagios-sms5.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 156.15,
+      "p95_latency": 156.15,
+      "p99_latency": 156.15
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/redis.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 50.46,
+      "p95_latency": 50.46,
+      "p99_latency": 50.46
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/sad-medic.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 860.812,
+      "p95_latency": 860.812,
+      "p99_latency": 860.812
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/simple-inputs-filters-outputs.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 2337.244,
+      "p95_latency": 2337.244,
+      "p99_latency": 2337.244
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/images/tiered-outputs-to-inputs.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 2159.966,
+      "p95_latency": 2159.966,
+      "p99_latency": 2159.966
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/plugin/highlight/highlight.js",
+      "visit_ratio": 0.002,
+      "avg_latency": 52.37,
+      "p95_latency": 52.37,
+      "p99_latency": 52.37
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/plugin/notes/notes.js",
+      "visit_ratio": 0.002,
+      "avg_latency": 5.784,
+      "p95_latency": 5.784,
+      "p99_latency": 5.784
+    },
+    {
+      "name": "/presentations/logstash-monitorama-2013/plugin/zoom-js/zoom.js",
+      "visit_ratio": 0.002,
+      "avg_latency": 15.394,
+      "p95_latency": 15.394,
+      "p99_latency": 15.394
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/",
+      "visit_ratio": 0.006,
+      "avg_latency": 74.538,
+      "p95_latency": 74.538,
+      "p99_latency": 74.538
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/css/main.css",
+      "visit_ratio": 0.002,
+      "avg_latency": 52.996,
+      "p95_latency": 52.996,
+      "p99_latency": 52.996
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/css/preso.css",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.318,
+      "p95_latency": 1.318,
+      "p99_latency": 1.318
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/css/print.css",
+      "visit_ratio": 0.002,
+      "avg_latency": 7.99,
+      "p95_latency": 7.99,
+      "p99_latency": 7.99
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/css/reset.css",
+      "visit_ratio": 0.002,
+      "avg_latency": 2.764,
+      "p95_latency": 2.764,
+      "p99_latency": 2.764
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/apache-negative-duration.png",
+      "visit_ratio": 0.004,
+      "avg_latency": 194.346,
+      "p95_latency": 194.346,
+      "p99_latency": 194.346
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/computer-keyboard-jacket.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 353.61,
+      "p95_latency": 353.61,
+      "p99_latency": 353.61
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/frontend-response-codes.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 105.756,
+      "p95_latency": 105.756,
+      "p99_latency": 105.756
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/kibana-chef-agent.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 146.374,
+      "p95_latency": 146.374,
+      "p99_latency": 146.374
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/kibana-chef-hits-6min-each.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 161.11,
+      "p95_latency": 161.11,
+      "p99_latency": 161.11
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/kibana-logstash-downloads.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 190.116,
+      "p95_latency": 190.116,
+      "p99_latency": 190.116
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/lifecycle.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 19.236,
+      "p95_latency": 19.236,
+      "p99_latency": 19.236
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/logs.jpg",
+      "visit_ratio": 0.004,
+      "avg_latency": 1327.694,
+      "p95_latency": 1327.694,
+      "p99_latency": 1327.694
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/logstash.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 95.462,
+      "p95_latency": 95.462,
+      "p99_latency": 95.462
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/nagios-sms1.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 110.956,
+      "p95_latency": 110.956,
+      "p99_latency": 110.956
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/nagios-sms2.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 121.312,
+      "p95_latency": 121.312,
+      "p99_latency": 121.312
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/nagios-sms3.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 131.834,
+      "p95_latency": 131.834,
+      "p99_latency": 131.834
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/nagios-sms4.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 145.898,
+      "p95_latency": 145.898,
+      "p99_latency": 145.898
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/nagios-sms5.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 156.15,
+      "p95_latency": 156.15,
+      "p99_latency": 156.15
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/nagios-sms6.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 165.718,
+      "p95_latency": 165.718,
+      "p99_latency": 165.718
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/office-space-printer-beat-down-gif.gif",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.728,
+      "p95_latency": 0.728,
+      "p99_latency": 0.728
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/pc-load-letter.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 143.616,
+      "p95_latency": 143.616,
+      "p99_latency": 143.616
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/psychoaxe.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 58.358,
+      "p95_latency": 58.358,
+      "p99_latency": 58.358
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/stats-negative-min.png",
+      "visit_ratio": 0.004,
+      "avg_latency": 92.278,
+      "p95_latency": 92.278,
+      "p99_latency": 92.278
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/sysadvent.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 216.994,
+      "p95_latency": 216.994,
+      "p99_latency": 216.994
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/trollface.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 116.246,
+      "p95_latency": 116.246,
+      "p99_latency": 116.246
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/xkcd-perl.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 161.326,
+      "p95_latency": 161.326,
+      "p99_latency": 161.326
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/images/xkcd-perlswing-many.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 200.414,
+      "p95_latency": 200.414,
+      "p99_latency": 200.414
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/js/reveal.js",
+      "visit_ratio": 0.002,
+      "avg_latency": 58.216,
+      "p95_latency": 58.216,
+      "p99_latency": 58.216
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/lib/css/zenburn.css",
+      "visit_ratio": 0.002,
+      "avg_latency": 3.582,
+      "p95_latency": 3.582,
+      "p99_latency": 3.582
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/lib/font/league_gothic-webfont.ttf",
+      "visit_ratio": 0.002,
+      "avg_latency": 84.648,
+      "p95_latency": 84.648,
+      "p99_latency": 84.648
+    },
+    {
+      "name": "/presentations/logstash-puppetconf-2012/lib/js/head.min.js",
+      "visit_ratio": 0.002,
+      "avg_latency": 6.34,
+      "p95_latency": 6.34,
+      "p99_latency": 6.34
+    },
+    {
+      "name": "/presentations/logstash-scale11x/images/ahhh___rage_face_by_samusmmx-d5g5zap.png",
+      "visit_ratio": 0.008,
+      "avg_latency": 350.416,
+      "p95_latency": 350.416,
+      "p99_latency": 350.416
+    },
+    {
+      "name": "/presentations/logstash-scale11x/images/jordan.jpg",
+      "visit_ratio": 0.002,
+      "avg_latency": 556.952,
+      "p95_latency": 556.952,
+      "p99_latency": 556.952
+    },
+    {
+      "name": "/presentations/logstash-scale11x/images/logstash-dreamhost-day.png",
+      "visit_ratio": 0.002,
+      "avg_latency": 68.426,
+      "p95_latency": 68.426,
+      "p99_latency": 68.426
+    },
+    {
+      "name": "/presentations/mpi",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.664,
+      "p95_latency": 0.664,
+      "p99_latency": 0.664
+    },
+    {
+      "name": "/presentations/puppet-at-loggly/puppet-at-loggly.pdf.html",
+      "visit_ratio": 0.006,
+      "avg_latency": 49.494,
+      "p95_latency": 49.494,
+      "p99_latency": 49.494
+    },
+    {
+      "name": "/presentations/security",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.674,
+      "p95_latency": 0.674,
+      "p99_latency": 0.674
+    },
+    {
+      "name": "/presentations/security/",
+      "visit_ratio": 0.002,
+      "avg_latency": 76.434,
+      "p95_latency": 76.434,
+      "p99_latency": 76.434
+    },
+    {
+      "name": "/presentations/semantic-blogging",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.692,
+      "p95_latency": 0.692,
+      "p99_latency": 0.692
+    },
+    {
+      "name": "/presentations/semantic-blogging/",
+      "visit_ratio": 0.002,
+      "avg_latency": 13.298,
+      "p95_latency": 13.298,
+      "p99_latency": 13.298
+    },
+    {
+      "name": "/presentations/unix-basics",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.68,
+      "p95_latency": 0.68,
+      "p99_latency": 0.68
+    },
+    {
+      "name": "/presentations/unix-basics/",
+      "visit_ratio": 0.002,
+      "avg_latency": 77.11,
+      "p95_latency": 77.11,
+      "p99_latency": 77.11
+    },
+    {
+      "name": "/presentations/vim",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.664,
+      "p95_latency": 0.664,
+      "p99_latency": 0.664
+    },
+    {
+      "name": "/presentations/vim/",
+      "visit_ratio": 0.002,
+      "avg_latency": 41.144,
+      "p95_latency": 41.144,
+      "p99_latency": 41.144
+    },
+    {
+      "name": "/projects",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.646,
+      "p95_latency": 0.646,
+      "p99_latency": 0.646
+    },
+    {
+      "name": "/projects/",
+      "visit_ratio": 0.002,
+      "avg_latency": 21.854,
+      "p95_latency": 21.854,
+      "p99_latency": 21.854
+    },
+    {
+      "name": "/projects/fex",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.654,
+      "p95_latency": 0.654,
+      "p99_latency": 0.654
+    },
+    {
+      "name": "/projects/fex/",
+      "visit_ratio": 0.004,
+      "avg_latency": 28.704,
+      "p95_latency": 28.704,
+      "p99_latency": 28.704
+    },
+    {
+      "name": "/projects/firefox-tabsearch",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.682,
+      "p95_latency": 0.682,
+      "p99_latency": 0.682
+    },
+    {
+      "name": "/projects/firefox-tabsearch/",
+      "visit_ratio": 0.004,
+      "avg_latency": 19.322,
+      "p95_latency": 19.322,
+      "p99_latency": 19.322
+    },
+    {
+      "name": "/projects/firefox-urledit",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.678,
+      "p95_latency": 0.678,
+      "p99_latency": 0.678
+    },
+    {
+      "name": "/projects/firefox-urledit/",
+      "visit_ratio": 0.002,
+      "avg_latency": 18.516,
+      "p95_latency": 18.516,
+      "p99_latency": 18.516
+    },
+    {
+      "name": "/projects/grok",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.674,
+      "p95_latency": 0.674,
+      "p99_latency": 0.674
+    },
+    {
+      "name": "/projects/keynav",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.66,
+      "p95_latency": 0.66,
+      "p99_latency": 0.66
+    },
+    {
+      "name": "/projects/keynav/",
+      "visit_ratio": 0.002,
+      "avg_latency": 37.97,
+      "p95_latency": 37.97,
+      "p99_latency": 37.97
+    },
+    {
+      "name": "/projects/liboverride",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.67,
+      "p95_latency": 0.67,
+      "p99_latency": 0.67
+    },
+    {
+      "name": "/projects/liboverride/",
+      "visit_ratio": 0.002,
+      "avg_latency": 25.818,
+      "p95_latency": 25.818,
+      "p99_latency": 25.818
+    },
+    {
+      "name": "/projects/newpsm",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.66,
+      "p95_latency": 0.66,
+      "p99_latency": 0.66
+    },
+    {
+      "name": "/projects/newpsm/",
+      "visit_ratio": 0.002,
+      "avg_latency": 39.928,
+      "p95_latency": 39.928,
+      "p99_latency": 39.928
+    },
+    {
+      "name": "/projects/nis2ldap",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.664,
+      "p95_latency": 0.664,
+      "p99_latency": 0.664
+    },
+    {
+      "name": "/projects/nis2ldap/",
+      "visit_ratio": 0.002,
+      "avg_latency": 16.704,
+      "p95_latency": 16.704,
+      "p99_latency": 16.704
+    },
+    {
+      "name": "/projects/pam_captcha",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.67,
+      "p95_latency": 0.67,
+      "p99_latency": 0.67
+    },
+    {
+      "name": "/projects/pam_captcha/",
+      "visit_ratio": 0.002,
+      "avg_latency": 21.028,
+      "p95_latency": 21.028,
+      "p99_latency": 21.028
+    },
+    {
+      "name": "/projects/pmbackup",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.664,
+      "p95_latency": 0.664,
+      "p99_latency": 0.664
+    },
+    {
+      "name": "/projects/pmbackup/",
+      "visit_ratio": 0.002,
+      "avg_latency": 31.89,
+      "p95_latency": 31.89,
+      "p99_latency": 31.89
+    },
+    {
+      "name": "/projects/solaudio",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.664,
+      "p95_latency": 0.664,
+      "p99_latency": 0.664
+    },
+    {
+      "name": "/projects/solaudio/",
+      "visit_ratio": 0.002,
+      "avg_latency": 16.602,
+      "p95_latency": 16.602,
+      "p99_latency": 16.602
+    },
+    {
+      "name": "/projects/xboxproxy",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.666,
+      "p95_latency": 0.666,
+      "p99_latency": 0.666
+    },
+    {
+      "name": "/projects/xboxproxy/",
+      "visit_ratio": 0.002,
+      "avg_latency": 26.342,
+      "p95_latency": 26.342,
+      "p99_latency": 26.342
+    },
+    {
+      "name": "/projects/xdotool",
+      "visit_ratio": 0.006,
+      "avg_latency": 0.6673333333333334,
+      "p95_latency": 0.6764,
+      "p99_latency": 0.6776800000000001
+    },
+    {
+      "name": "/projects/xdotool/",
+      "visit_ratio": 0.024,
+      "avg_latency": 24.584,
+      "p95_latency": 24.584,
+      "p99_latency": 24.584
+    },
+    {
+      "name": "/projects/xdotool/xdotool.xhtml",
+      "visit_ratio": 0.008,
+      "avg_latency": 100.224,
+      "p95_latency": 100.224,
+      "p99_latency": 100.224
+    },
+    {
+      "name": "/projects/xmlpresenter",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.672,
+      "p95_latency": 0.672,
+      "p99_latency": 0.672
+    },
+    {
+      "name": "/projects/xmlpresenter/",
+      "visit_ratio": 0.002,
+      "avg_latency": 23.256,
+      "p95_latency": 23.256,
+      "p99_latency": 23.256
+    },
+    {
+      "name": "/projects/xpathtool",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.666,
+      "p95_latency": 0.666,
+      "p99_latency": 0.666
+    },
+    {
+      "name": "/projects/xpathtool/",
+      "visit_ratio": 0.004,
+      "avg_latency": 21.49,
+      "p95_latency": 21.49,
+      "p99_latency": 21.49
+    },
+    {
+      "name": "/reset.css",
+      "visit_ratio": 0.058,
+      "avg_latency": 2.0300000000000002,
+      "p95_latency": 2.03,
+      "p99_latency": 2.03
+    },
+    {
+      "name": "/resume.xml",
+      "visit_ratio": 0.004,
+      "avg_latency": 51.212,
+      "p95_latency": 51.212,
+      "p99_latency": 51.212
+    },
+    {
+      "name": "/scripts",
+      "visit_ratio": 0.004,
+      "avg_latency": 0.644,
+      "p95_latency": 0.644,
+      "p99_latency": 0.644
+    },
+    {
+      "name": "/scripts/",
+      "visit_ratio": 0.002,
+      "avg_latency": 43.78,
+      "p95_latency": 43.78,
+      "p99_latency": 43.78
+    },
+    {
+      "name": "/scripts/?C=M;O=A",
+      "visit_ratio": 0.002,
+      "avg_latency": 43.788,
+      "p95_latency": 43.788,
+      "p99_latency": 43.788
+    },
+    {
+      "name": "/scripts/?C=M;O=D",
+      "visit_ratio": 0.002,
+      "avg_latency": 43.788,
+      "p95_latency": 43.788,
+      "p99_latency": 43.788
+    },
+    {
+      "name": "/scripts/grok-py-test/",
+      "visit_ratio": 0.002,
+      "avg_latency": 4.724,
+      "p95_latency": 4.724,
+      "p99_latency": 4.724
+    },
+    {
+      "name": "/scripts/noise",
+      "visit_ratio": 0.002,
+      "avg_latency": 1.584,
+      "p95_latency": 1.584,
+      "p99_latency": 1.584
+    },
+    {
+      "name": "/scripts/python/wrap/?C=N;O=D",
+      "visit_ratio": 0.002,
+      "avg_latency": 5.262,
+      "p95_latency": 5.262,
+      "p99_latency": 5.262
+    },
+    {
+      "name": "/style2.css",
+      "visit_ratio": 0.056,
+      "avg_latency": 9.754000000000001,
+      "p95_latency": 9.754,
+      "p99_latency": 9.754
+    },
+    {
+      "name": "/test.xml",
+      "visit_ratio": 0.002,
+      "avg_latency": 2.74,
+      "p95_latency": 2.74,
+      "p99_latency": 2.74
+    },
+    {
+      "name": "/wp-login.php",
+      "visit_ratio": 0.002,
+      "avg_latency": 0.584,
+      "p95_latency": 0.584,
+      "p99_latency": 0.584
+    }
+  ]
+}

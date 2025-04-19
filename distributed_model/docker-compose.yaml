@@ -7,6 +7,12 @@ services:
     volumes:
       # - "./scripts/sparkdata:/sparkdata"
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - "./:/home/jovyan/work"
+      - "./:/home/jovyan/"
     ports:
-      - "8888:8888"
+      - "8888:8888"   # Jupyter
+      - "8000:8000"   # FastAPI
+    # command: >
+    #   sh -c "
+    #     pip install --no-cache-dir -r requirements.txt &&
+    #     uvicorn --app-dir /home/jovyan/src/scripts app:app --host 0.0.0.0 --port 8000
+    #   "
